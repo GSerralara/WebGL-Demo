@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../garage.css">
+    <title>Document</title>
+    <script src="./../libs/three.js"></script>
+    <script src="./../libs/OrbitControls.js"></script>
+    <script src="./../libs/OBJLoader.js"></script>
+    <script src="./../js/launcher.js"></script>
+</head>
+<body onload=init()>
+    <script>
+        function setCar(value){
+            
+            if(value == '3' && localStorage.getItem('car') != '3'){
+                localStorage.setItem('shiftCar',0);
+            }
+            if(value == '3' && localStorage.getItem('car') == '3'){
+                if(localStorage.getItem('shiftCar') == 7){
+                    localStorage.setItem('shiftCar',0);
+                }else{
+                    localStorage.setItem('shiftCar',parseInt(localStorage.getItem('shiftCar'))+1);
+                }
+            }
+            localStorage.setItem('car',value);
+            location.reload();
+        }
+    </script>
+    <div id="menu">
+        <ul>
+            <li><a onclick="setCar(1)" href="#">Volkswagen I.D.R</a></li>
+            <li><a onclick="setCar(2)" href="#">Toyota</a></li>
+            <li><a onclick="setCar(3)" href="#">Porsche 911 GT2</a></li>
+            <li><a onclick="setCar(4)" href="#">Ferrari SF70H</a></li>
+            <li><a href="./../index.html">Atras</a></li>
+        </ul>
+    </div>
+    <div id='content'></div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+body{
+    background-color: #F9F8FC;
+    height: 200px;
+}
+#logo{
+    margin: auto;
+    text-align: center;
+}
+#logo h1{
+    font-family: 'Pacifico', cursive;
+    font-size: 58px;
+}
+#nav{
+    height: 62px;
+    text-align: center;
+}
+
+#menu {
+    float:right;
+    position:relative;
+    left:-50%;
+    text-align:left;
+}
+#menu ul{
+    list-style:none;
+    position:relative;
+    left:50%;
+}
+
+#menu ul li{
+    float: left;
+    position:relative;
+}
+
+#menu ul li a {
+    text-decoration:none;
+    margin:10px;
+    float:left;    
+    padding:2px 5px;
+    text-align:center;
+    white-space:nowrap;
+    font-size: 18px;
+	font-weight: bold;
+}

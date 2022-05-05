@@ -1,0 +1,26 @@
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+li{
+    box-sizing: border-box;
+    padding: 30px;
+    width: 20%;
+    background: blue;
+    border: 1px solid white;
+    font-size: large;
+    font-family: monospace;
+}
+li a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+#content canvas{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
